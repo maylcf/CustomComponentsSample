@@ -1,0 +1,8 @@
+<resources>
+    <!-- Menu Item Component -->
+    <dimen name="component_menu_item_default_font_size">14sp</dimen>
+    <dimen name="component_menu_item_default_container_size">48dp</dimen>
+    <dimen name="component_menu_item_container_margin">8dp</dimen>
+    <dimen name="component_menu_item_icon_size">24dp</dimen>
+    <dimen name="component_menu_item_icon_margin">10dp</dimen>
+</resources>
