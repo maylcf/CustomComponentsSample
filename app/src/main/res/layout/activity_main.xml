@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.mayarafelix.components.MyText
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.mayarafelix.components.menuitem.MenuItemComponent
+            android:id="@+id/menuitem1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:iconResourceId="@drawable/ic_cloud"
+            app:title="Menu Item 1" />
+
+        <com.mayarafelix.components.menuitem.MenuItemComponent
+            android:id="@+id/menuitem2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:containerColor="@color/colorPink"
+            app:divisorColor="@android:color/holo_blue_bright"
+            app:iconContentDescription="@string/icon_content_description"
+            app:iconResourceId="@drawable/ic_cloud"
+            app:iconTint="@android:color/holo_blue_bright"
+            app:title="Menu Item 2"
+            app:titleColor="@android:color/holo_blue_bright"
+            app:titleSize="@dimen/component_menu_item_title_font_size" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:title="Hello World!"
-        app:style="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Update Menu Item 1" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Menu Item 2" />
+
+</LinearLayout>
