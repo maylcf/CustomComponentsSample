@@ -1,0 +1,5 @@
+<resources>
+    <!-- Menu Item Component -->
+    <dimen name="component_menu_item_title_font_size">18sp</dimen>
+
+</resources>
