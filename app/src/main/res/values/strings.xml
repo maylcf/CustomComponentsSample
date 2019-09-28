@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Custom Components Sample</string>
+    <string name="icon_content_description">Cloud</string>
 </resources>

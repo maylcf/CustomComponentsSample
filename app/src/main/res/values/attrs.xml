@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="MyText">
+    <declare-styleable name="MenuItemComponent">
         <attr name="title" format="string" />
-        <attr name="style" format="boolean" />
+        <attr name="titleSize" format="reference" />
+        <attr name="titleColor" format="color|reference" />
+        <attr name="iconResourceId" format="reference" />
+        <attr name="iconContentDescription" format="string" />
+        <attr name="iconTint" format="color|reference" />
+        <attr name="containerColor" format="reference" />
+        <attr name="divisorColor" format="color|reference" />
     </declare-styleable>
 </resources>
