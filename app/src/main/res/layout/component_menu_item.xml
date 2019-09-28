@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.mayarafelix.components.menuitem.MenuItemBindingModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/component_menu_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/component_menu_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/component_menu_item_container_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/component_menu_image"
+                android:layout_width="@dimen/component_menu_item_icon_size"
+                android:layout_height="@dimen/component_menu_item_icon_size"
+                android:layout_marginEnd="@dimen/component_menu_item_icon_margin"
+                android:contentDescription="@{model.icon.description}"
+                android:src="@{model.icon.drawable}"
+                android:tint="@{model.icon.tint}"
+                android:visibility="@{model.getIconVisibility}"
+                tools:src="@drawable/ic_cloud" />
+
+            <TextView
+                android:id="@+id/component_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.title.content}"
+                android:textColor="@{model.title.colorRes}"
+                android:textSize="@{model.title.fontSize}"
+                android:visibility="@{model.getTitleVisibility}"
+                tools:text="titlesssss" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/component_menu_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:layout_below="@id/component_menu_content"
+            android:layout_alignEnd="@id/component_menu_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@{model.divisorColor}"
+            android:visibility="@{model.divisorVisibility}" />
+
+    </RelativeLayout>
+</layout>
